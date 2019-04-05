@@ -1,10 +1,12 @@
-@import './util/scss/breakpoints.scss';
+//// xs, sm, md, lg, xl
+@import "./util/scss/breakpoints.scss";
+
 .appbackground {
-  background-color: red;
+
 }
-@include media-breakpoint-down(sm) {
+
+@include media-breakpoint-down(lg) {
   .appbackground {
     background-color: green;
   }
-
 }
