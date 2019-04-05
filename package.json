@@ -1,5 +1,5 @@
 {
-  "name": "nodejs-server-example",
+  "name": "slack-like-chatapp",
   "version": "1.0.0",
   "description": "",
   "main": "server.ts",
@@ -8,6 +8,7 @@
     "antd": "^3.12.3",
     "axios": "^0.18.0",
     "express": "^4.16.4",
+    "js-cookie": "^2.2.0",
     "node-sass": "^4.11.0",
     "nodemon": "^1.18.9",
     "react": "^16.7.0",
@@ -16,6 +17,7 @@
     "ts-import-plugin": "^1.5.5",
     "ts-node": "^7.0.1",
     "typescript": "^3.2.4",
+    "typescript-compiler": "^1.4.1-2",
     "webpack": "^4.28.4",
     "webpack-dev-middleware": "^3.5.1"
   },
@@ -36,14 +38,6 @@
     "dev": "nodemon --ignore client --exec 'NODE_ENV=development ts-node --inspect --cache-directory ./node_modules/.tscache --project ./server/tsconfig.json' ./server/server.ts",
     "start": "ts-node --project ./server/tsconfig.json ./server/server.ts "
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/intelliapps-io/nodejs-server-example.git"
-  },
   "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/intelliapps-io/nodejs-server-example/issues"
-  },
-  "homepage": "https://github.com/intelliapps-io/nodejs-server-example#readme"
+  "license": "ISC"
 }

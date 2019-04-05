@@ -1,18 +1,9 @@
-// Variables
-$font-quicksand: 'Roboto', sans-serif;
-$font-roboto: 'Roboto', sans-serif;
-
-$font-family-header: 'Roboto', sans-serif;
-$font-family-text: 'Open Sans', sans-serif;
-
-$font-color-header: hsla(210, 15%, 20%, 0.80);
-
-@mixin centerer {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+@mixin clean-slate {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
+
 
 /////////////////////////////////////////////////////////////////////
 ////////////////////////// BOOTSTRAP BELOW //////////////////////////

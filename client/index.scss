@@ -1,12 +1,35 @@
 //// xs, sm, md, lg, xl
 @import "./util/scss/breakpoints.scss";
+body {
+  @include clean-slate;
+}
 
-.appbackground {
+.main {
 
 }
 
 @include media-breakpoint-down(lg) {
-  .appbackground {
+  .main {
     background-color: green;
   }
+}
+@include media-breakpoint-down(md) {
+  .main {
+    background-color: $cyan;
+  }
+
+}
+
+@include media-breakpoint-down(sm) {
+  .main {
+    background-color: $danger;
+  }
+
+}
+
+@include media-breakpoint-down(xs) {
+  .main {
+    background-color: $dark;
+  }
+
 }
