@@ -4,16 +4,27 @@ import * as ReactDOM from "react-dom";
 
 //imported files
 import './index.scss';
-import Cookie from "js-cookie";
-import UsernameForm from "./components/UsernameForm";
+import RoomList from "./components/RoomList";
+import MessageList from "./components/RoomList";
+import SendMessageList from "./components/SendMessageList";
+import NewRoomForm from "./components/NewRoomForm";
 
+
+interface IState {
+
+}
 
 // Import App, which is the main react component
-class App extends React.Component {
+class App extends React.Component<{}, IState> {
   render() {
     return (
       <div className="main">
-        This is basic react!
+        <RoomList />
+        <MessageList />
+        <SendMessageList />
+        <NewRoomForm/>
+        <h1>hello</h1>
+        
       </div>
     );
   }
