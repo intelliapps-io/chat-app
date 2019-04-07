@@ -1,17 +1,17 @@
 // React
-import * as React from "react";
-import * as ReactDOM from "react-dom";
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
 
 //imported files
 import './index.scss';
-import RoomList from "./components/RoomList";
-import MessageList from "./components/RoomList";
-import SendMessageList from "./components/SendMessageList";
-import NewRoomForm from "./components/NewRoomForm";
+import RoomList from './components/RoomList';
+import MessageList from './components/MessageList';
+import SendMessageList from './components/SendMessageList';
+import NewRoomForm from './components/NewRoomForm';
 
 
 interface IState {
-
+  
 }
 
 // Import App, which is the main react component
@@ -23,8 +23,6 @@ class App extends React.Component<{}, IState> {
         <MessageList />
         <SendMessageList />
         <NewRoomForm/>
-        <h1>hello</h1>
-        
       </div>
     );
   }
