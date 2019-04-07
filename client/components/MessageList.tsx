@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 interface IState {
-  DUMMY_DATA: object []
+  DUMMY_DATA: object[]
 
 }
 

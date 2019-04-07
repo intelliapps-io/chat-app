@@ -7,27 +7,30 @@ body {
 
 .main {
   display: grid;
-  height: 100%;
+  height: 100vh;
+  width: 100vw;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 60px;
-  grid-template-areas: "r m m m m m"
-                       "r m m m m m"
-                       "r m m m m m"
-                       "r m m m m m"
-                       "r m m m m m"
-                       "n s s s s s";
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: 
+    "r m m m m m"
+    "r m m m m m"
+    "r m m m m m"
+    "r m m m m m"
+    "r m m m m m"
+    "n s s s s s"
+  ;
 }
 .room-list {
   grid-area: r;
   background-color: $primary;
-  height: 100%;
-}
-.new-room-form {
-  grid-area: n;
-  
+  text-align: center;
 }
 .message-list {
   grid-area: m;
+}
+.new-room-form {
+  grid-area: n;
+  background-color: $gray-300;
 }
 .send-message {
   grid-area: s;
