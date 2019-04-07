@@ -7,7 +7,7 @@ interface IState {
 class NewRoomForm extends React.Component<{}, IState> {
   render() {
     return (
-      <div>
+      <div className="new-room-form">
         <h1>NewRoomForm</h1>
       </div>
     )

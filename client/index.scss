@@ -2,12 +2,39 @@
 @import "./util/scss/breakpoints.scss";
 body {
   @include clean-slate;
+  background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
 }
 
 .main {
-
+  display: grid;
+  height: 100%;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 60px;
+  grid-template-areas: "r m m m m m"
+                       "r m m m m m"
+                       "r m m m m m"
+                       "r m m m m m"
+                       "r m m m m m"
+                       "n s s s s s";
+}
+.room-list {
+  grid-area: r;
+  background-color: $primary;
+  height: 100%;
+}
+.new-room-form {
+  grid-area: n;
+  
+}
+.message-list {
+  grid-area: m;
+}
+.send-message {
+  grid-area: s;
 }
 
+
+//breakpoints
 @include media-breakpoint-down(lg) {
   .main {
     background-color: green;

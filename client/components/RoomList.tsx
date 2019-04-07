@@ -7,7 +7,7 @@ interface IState {
 class RoomList extends React.Component<{}, IState> {
   render() {
     return (
-      <div>
+      <div className="room-list">
         <h1>RoomList</h1>
 
       </div>

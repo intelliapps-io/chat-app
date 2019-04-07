@@ -6,7 +6,7 @@ interface IState {
 class SendMessageList extends React.Component<{}, IState> {
   render() {
     return (
-      <div>
+      <div className="send-message">
         <h1>SendMessageList</h1>
       </div>
     )

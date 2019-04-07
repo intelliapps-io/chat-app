@@ -30,7 +30,12 @@ class MessageList extends React.Component<{}, IState> {
     return (
       <div className="message-list">
         {this.state.DUMMY_DATA.map((messages, index) => {
-          return <div key={index}>{messages.text}</div>
+          return (
+            <div className="messages">
+              <div key={index}>{messages.senderId}</div>
+              <div key={index}>{messages.text}</div>
+            </div>
+          );
         })}
       </div>
     )
