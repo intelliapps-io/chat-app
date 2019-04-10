@@ -1,8 +1,10 @@
 //// xs, sm, md, lg, xl
 @import "./util/scss/breakpoints.scss";
+@import url('https://fonts.googleapis.com/css?family=Work+Sans');
 body {
   @include clean-slate;
   background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+  font-family: 'Work Sans', sans-serif;
 }
 
 .main {
@@ -24,6 +26,7 @@ body {
   grid-area: r;
   background-color: $primary;
   text-align: center;
+  font-size: .8em;
 }
 .message-list {
   grid-area: m;
@@ -31,9 +34,32 @@ body {
 .new-room-form {
   grid-area: n;
   background-color: $gray-300;
+  padding: 0 0 0 5px;
+  font-size: .9em;
 }
 .send-message {
   grid-area: s;
+  background-color: $gray-400;
+  padding: 0 0 0 5px;
+  font-size: .8em;
+}
+
+.messages {
+  margin: 15px 0;
+  padding: 0 0 0 5px;
+  .message-username {
+    font-size: .8em;
+    margin: 0 0 8px 0;
+    color: $gray-700;
+  }
+  .message-text {
+    background-color: $success;
+    display: inline;
+    font-size: 1.2em;
+    padding: 6px 8px;
+    border-radius: 8px;
+    color: $white;
+  }
 }
 
 

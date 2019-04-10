@@ -11,16 +11,16 @@ class MessageList extends React.Component<{}, IState> {
     this.state = {
       DUMMY_DATA: [
         {
-          senderId: 'dom',
+          senderId: 'DomCharm',
           text: 'sup fam'
         },
         {
-          senderId: 'killah',
+          senderId: 'KillahCam',
           text: 'I really mean it!'
         },
         {
-          senderId: 'hero',
-          text: 'get saved'
+          senderId: 'Hero_Nakamorro',
+          text: 'check out my pet blunt'
         }
       ]
     }
@@ -29,11 +29,11 @@ class MessageList extends React.Component<{}, IState> {
   render() {
     return (
       <div className="message-list">
-        {this.state.DUMMY_DATA.map((messages, index) => {
+        {this.state.DUMMY_DATA.map((message, index) => {
           return (
-            <div className="messages">
-              <div key={index}>{messages.senderId}</div>
-              <div key={index}>{messages.text}</div>
+            <div key={index} className="messages">
+              <div className="message-username">{message.senderId}</div>
+              <div className="message-text">{message.text}</div>
             </div>
           );
         })}

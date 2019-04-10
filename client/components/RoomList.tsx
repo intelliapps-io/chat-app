@@ -8,8 +8,7 @@ class RoomList extends React.Component<{}, IState> {
   render() {
     return (
       <div className="room-list">
-        <h1>RoomList</h1>
-
+        <div className="help-text">Roomlist</div>
       </div>
     )
   }

@@ -4,6 +4,7 @@
   "description": "",
   "main": "server.ts",
   "dependencies": {
+    "@pusher/chatkit-client": "^1.4.1",
     "@types/axios": "^0.14.0",
     "antd": "^3.12.3",
     "axios": "^0.18.0",
