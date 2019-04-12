@@ -6,14 +6,15 @@ import * as ReactDOM from 'react-dom';
 import './index.scss';
 import Chatkit from '@pusher/chatkit-client';
 import RoomList from './components/RoomList';
-import MessageList from './components/MessageList';
+import MessageList, {IMassage} from './components/MessageList';
 import SendMessageList from './components/SendMessageForm';
 import NewRoomForm from './components/NewRoomForm';
-import { tokenUrl, instanceLocator } from './chatkit';
+import { tokenUrl, instanceLocator } from './chatkit'
 
 interface IState {
   roomId: number
-  currentUser: Object | null
+  currentUser: Object | null //set state of curent user
+  messages: IMassage[] //state of messages
 }
 
 // Import App, which is the main react component
@@ -22,9 +23,11 @@ class App extends React.Component<{}, IState> {
     super(props)
     this.state = {
       roomId: 20272964,
-      currentUser: null
+      currentUser: null,
+      messages: []// set to an empty array
     }
   }
+
   componentDidMount() {
     const chatManager = new Chatkit.ChatManager ({
       instanceLocator,
@@ -32,27 +35,27 @@ class App extends React.Component<{}, IState> {
       tokenProvider: new Chatkit.TokenProvider({
         url: tokenUrl
       })
-    })
+    })//after connection has been estiblished with api
 
     chatManager.connect().then(currentUser => {
-      // console.log(currentUser);
       this.setState({ currentUser });
-      // console.log(currentUser);
       currentUser.subscribeToRoom({
         roomId: this.state.roomId.toString(),
         hooks: {
           onNewMessage: message => {
-            console.log('message.text: ', message.text);
+
           }
         }
       });
 
       currentUser.fetchMultipartMessages({
-        roomId: this.state.roomId.toString()
+        roomId: this.state.roomId.toString(),
       })
         .then(messages => {
-          console.log(messages);
+          console.log(messages)
+          this.setState({ messages })//the expty arrray is state is set to the dattap pulled
           // do something with the messages
+
         })
         .catch(err => {
           console.log(`Error fetching messages: ${err}`)
@@ -68,7 +71,7 @@ class App extends React.Component<{}, IState> {
     return (
       <div className="main">
         <RoomList />
-        <MessageList />
+        <MessageList messages={this.state.messages}/>
         <SendMessageList />
         <NewRoomForm/>
       </div>

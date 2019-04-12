@@ -7,8 +7,7 @@ interface IState {
 class NewRoomForm extends React.Component<{}, IState> {
   render() {
     return (
-      <div className="new-room-form">
-        <form>
+        <form className="new-room-form">
           <input
             type="text"
             placeholder="NewRoomForm"
@@ -16,7 +15,6 @@ class NewRoomForm extends React.Component<{}, IState> {
           />
           <button id="create-room-btn" type="submt">+</button>
         </form>
-      </div>
     )
   }
 }
