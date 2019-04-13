@@ -1,4 +1,5 @@
 import * as React from 'react';
+import Message from './Message';
 
 
 export interface IMassage { //exported the massages state 
@@ -21,10 +22,7 @@ class MessageList extends React.Component<IProps> {
       <div className="message-list">
         {this.props.messages.map((message, index) => {//map the properties of the fetch data
           return (
-            <div key={index} className="messages">
-              <div className="message-username">{message.senderId}</div>
-              <div className="message-text">{message.parts[0].payload.content}</div>
-            </div>
+            <Message key={index} username={message.senderId} content={message.parts[0].payload.content}/>
           );
         })}
       </div>
