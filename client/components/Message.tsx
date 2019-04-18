@@ -1,19 +1,18 @@
 import * as React from 'react';
 
-
-interface IState {
+interface IProps {
+  username: string
+  content: string
 }
 
-class Message extends React.Component<{}, IState> {
-  
-  render() {
-    return (
-      <div className="message">
-        <div className="message-username">{this.props.username}</div>
-        <div className="message-text">{this.props.content}</div>
-      </div>
-    )
-  }
+export const Message: React.FunctionComponent<IProps> = (props) => { //turned component in to a functional component
+  return (
+    <div className="message">
+      <div className="message-username">{props.username}</div>
+      <div className="message-text">{props.content}</div>
+    </div>
 
+  )
 }
+
 export default Message;

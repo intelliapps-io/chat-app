@@ -4,6 +4,7 @@ import Message from './Message';
 
 export interface IMassage { //exported the massages state 
   senderId: string //senderId in api
+  username: any
   parts: [{//to obtain messages from api, how it is nested 
     payload: {// what was send
       content: string//actual message

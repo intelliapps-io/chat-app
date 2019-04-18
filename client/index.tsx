@@ -53,7 +53,7 @@ class App extends React.Component<{}, IState> {
       })
         .then(messages => {
           console.log(messages)
-          this.setState({ messages })//the expty arrray is state is set to the dattap pulled
+          this.setState({ messages });
           // do something with the messages
 
         })
@@ -71,7 +71,7 @@ class App extends React.Component<{}, IState> {
     return (
       <div className="main">
         <RoomList />
-        <MessageList messages={this.state.messages}/>
+        <MessageList messages={this.state.messages}/> 
         <SendMessageList />
         <NewRoomForm/>
       </div>
