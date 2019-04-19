@@ -16,13 +16,14 @@ interface IState {
   currentUser: Object | null //set state of curent user
   messages: IMassage[] //state of messages
 }
-
+//State is private to a component
+//props is is not provate and is shared between compoents
 // Import App, which is the main react component
 class App extends React.Component<{}, IState> {
   constructor(props) {
     super(props)
     this.state = {
-      roomId: 20272964,
+      roomId: 20580718,
       currentUser: null,
       messages: []// set to an empty array
     }
@@ -64,6 +65,7 @@ class App extends React.Component<{}, IState> {
     })
 
   }
+
   render() {
     const { currentUser } = this.state;
     const isLoading = currentUser === null;
