@@ -6,6 +6,7 @@
   "dependencies": {
     "@pusher/chatkit-client": "^1.4.1",
     "@types/axios": "^0.14.0",
+    "@types/react-dom": "^16.8.4",
     "antd": "^3.12.3",
     "axios": "^0.18.0",
     "express": "^4.16.4",
@@ -24,7 +25,7 @@
   },
   "devDependencies": {
     "@types/express": "^4.16.0",
-    "@types/react": "^16.7.20",
+    "@types/react": "^16.8.14",
     "@types/styled-components": "^4.1.6",
     "@types/webpack": "^4.4.23",
     "css-loader": "^2.1.0",

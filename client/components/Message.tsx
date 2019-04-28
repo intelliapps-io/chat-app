@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-interface IProps {
+interface IProps {// props needed for typescipt
   username: string
   content: string
 }

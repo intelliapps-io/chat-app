@@ -11,6 +11,7 @@ export interface IMassage { //exported the massages state
     }
   }]
 }
+
 interface IProps { //messages property
   messages: IMassage[] //will contain senderId and content
 
@@ -23,7 +24,7 @@ class MessageList extends React.Component<IProps> {
       <div className="message-list">
         {this.props.messages.map((message, index) => {//map the properties of the fetch data
           return (
-            <Message key={index} username={message.senderId} content={message.parts[0].payload.content}/>
+            <Message key={index} username={message.senderId} content={message.parts[0].payload.content}/> /*how you pass down props to child component*/
           );
         })}
       </div>
