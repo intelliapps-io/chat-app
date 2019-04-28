@@ -6,7 +6,6 @@ interface IState {
 
 interface IProps {
   sendMessage: (text: string)=> void //sendMessage is a funtcion takes text as input and return nothing
-
 }
 
 class SendMessageForm extends React.Component<IProps, IState> {
@@ -20,7 +19,6 @@ class SendMessageForm extends React.Component<IProps, IState> {
 
   handleSubmit(event) {
     event.preventDefault();
-    console.log(this.state.message)
     this.props.sendMessage(this.state.message)
     this.setState({ message: '' });
   }
@@ -38,7 +36,6 @@ class SendMessageForm extends React.Component<IProps, IState> {
         />
         <button>send</button>
       </form>
-      
     )
   }
 }
